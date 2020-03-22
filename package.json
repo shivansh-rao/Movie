@@ -1,0 +1,19 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "m.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "m.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

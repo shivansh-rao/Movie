@@ -1,0 +1,32 @@
+
+			<div class="col-md-4 col-sm-6" >
+				<div class="thumbanail" class="caption" style="background: lightgrey;padding:10px; margin-bottom:10px;" >
+				<h2 style="padding:10px;text-align:center;color:#c72643;">
+				<%=c.movie_title%>    
+					</h2>
+				<h4>
+				Directed by- <i style="color:#792d91;"><%=c.director_name%></i> in <%=c.title_year%>
+		        </h4>
+				<h4>
+				Actors are <i style="color:#792d91;"><%=c.actor_1_name%></i> and <i style="color:#792d91;"><%=c.actor_2_name%></i>
+		        </h4>
+				<h4>
+				Genre is <e><%=c.genres%></e>
+		        </h4>
+				<h5>
+					<p>
+						Language- <%=c.language%> 
+					</p>
+					rated <p style="color:#792d91;">
+					<%=c.content_rating%>
+					</p>
+				</h5>
+				<h5>
+					Country-       <%=c.country%> 
+					<p>
+						Budgted Rs: <%=c.budget%>
+					</p>
+				</h5>
+				<a href="<%=c.movie_imdb_link%>">Link to movie</a>
+		    </div>
+			</div>

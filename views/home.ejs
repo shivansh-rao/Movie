@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>Movies</title>
+		<link rel="stylesheet" href="/styles/design.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		
+		<style>
+			h1{
+				color: lightblue:
+			};
+		</style>
+	</head>
+	
+	<body style="background: lightblue; margin-top:50px;">
+		<div class="container">
+  				<div class="jumbotron" style="background: lightgreen;">
+ 
+		<nav class="nav navbar-default">
+			<h1 id="header" style="text-align:center;">
+			Best Rated Movies
+		    </h1>
+			<form action="/search" method="GET" >
+				<input  style="margin-left:5%;width: 30%;
+  								font-size: 18px;
+								  padding: 11px;
+  								border: 1px solid #ddd;display:inline;" type="text" name="fname" placeholder="search movie"  >
+			</form>
+			<ul class=" nav navbar-nav navbar-right" style="margin-right:10%; display:inline;">
+			<form action="/sortby" method="GET">
+				<label>
+					SORT BY...
+					</label>
+			        <li><input type="submit" class="btn btn-medium btn-success"  placeholder="budget" name="option" value="budget"  style="margin-bottom:3%;"></li>
+					<li><input type="submit" placeholder="year" class="btn btn-medium btn-success"  name="option" value="year" style="margin-bottom:3%;"></li>
+					<li><input type="submit" placeholder="rating" class="btn btn-medium btn-success"  name="option" value="rating" style="margin-bottom:3%;"></li>
+			</form>
+			</ul>
+		</nav>
+			</div>
+		</div>
+		<div class="container">
+		<div class="row" style="display:flex; flex-wrap:wrap;" >
+			<% a.forEach(function(c){ %>
+			<div class="col-md-4 col-sm-6" >
+				<div class="thumbanail" class="caption" style="background: #f1f5e9;padding:10px; margin-bottom:10px;" >
+				<h2 style="padding:10px;text-align:center;color:#c72643;">
+				<%=c.movie_title%>    
+					</h2>
+				<h4>
+				Directed by- <i style="color:#792d91;"><%=c.director_name%></i> in <%=c.title_year%>
+		        </h4>
+				<h4>
+				Actors are <i style="color:#792d91;"><%=c.actor_1_name%></i> and <i style="color:#792d91;"><%=c.actor_2_name%></i>
+		        </h4>
+				<h4>
+				Genre is <e><%=c.genres%></e>
+		        </h4>
+				<h5>
+					<p>
+						Language- <%=c.language%> 
+					</p>
+					rated <p style="color:#792d91;">
+					<%=c.content_rating%>
+					</p>
+				</h5>
+				<h5>
+					Country-       <%=c.country%> 
+					<p>
+						Budgted Rs: <%=c.budget%>
+					</p>
+				</h5>
+				<a href="<%=c.movie_imdb_link%>">Link to movie</a>
+		    </div>
+			</div>
+		<%})%>
+		</div>
+		</div>
+		
+	</body>
+</html>
